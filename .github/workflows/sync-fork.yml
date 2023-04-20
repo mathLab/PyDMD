@@ -1,0 +1,14 @@
+name: Sync Fork
+
+on:
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tgymnich/fork-sync@v1.8
+        with:
+          retries: 1
+          retry_after: 5
