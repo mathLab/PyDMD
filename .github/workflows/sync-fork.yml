@@ -10,8 +10,6 @@ jobs:
     steps:
       - uses: tgymnich/fork-sync@v1.3
         with:
-          retries: 2
-          retry_after: 15
           owner: PyDMD
           base: master
           head: master
