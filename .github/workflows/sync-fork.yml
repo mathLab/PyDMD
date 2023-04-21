@@ -17,3 +17,4 @@ jobs:
           auto_approve: true
           ignore_fail: true
           merge_method: rebase
+          pr_title: Fork Sync
