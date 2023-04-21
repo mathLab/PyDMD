@@ -10,8 +10,10 @@ jobs:
     steps:
       - uses: tgymnich/fork-sync@v1.8
         with:
-          retries: 1
-          retry_after: 5
+          retries: 2
+          retry_after: 15
           owner: PyDMD
           base: master
           head: master
+          token: ${{ secrets.NDEMO_TOKEN }}
+          auto_approve: true
