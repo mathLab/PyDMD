@@ -8,13 +8,14 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: tgymnich/fork-sync@v1.3
+      - uses: tgymnich/fork-sync@v1.8
         with:
+          retries: 2
+          retry_after: 15
           owner: PyDMD
           base: master
           head: master
-          personal_token: ${{ secrets.NDEMO_TOKEN }}
+          token: ${{ secrets.NDEMO_TOKEN }}
           auto_approve: true
           ignore_fail: true
           merge_method: rebase
-          pr_title: Fork Sync
